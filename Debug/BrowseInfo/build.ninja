@@ -1,0 +1,90 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Embedded$ ASU\project2\DIO.c" -xcl_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.xcl" -macro_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\Embedded$ ASU\project2\DIO.c" -D ewarmPART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\Embedded$ ASU\project2\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.tmp"
+  rspfile_name = D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.xcl.rsp
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Embedded$ ASU\project2\KEYPAD.c" -xcl_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.xcl" -macro_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\Embedded$ ASU\project2\KEYPAD.c" -D ewarmPART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\Embedded$ ASU\project2\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.tmp"
+  rspfile_name = D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.xcl.rsp
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Embedded$ ASU\project2\lcd.c" -xcl_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.xcl" -macro_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\Embedded$ ASU\project2\lcd.c" -D ewarmPART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\Embedded$ ASU\project2\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.tmp"
+  rspfile_name = D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.xcl.rsp
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Embedded$ ASU\project2\LED.c" -xcl_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.xcl" -macro_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\Embedded$ ASU\project2\LED.c" -D ewarmPART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\Embedded$ ASU\project2\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.tmp"
+  rspfile_name = D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.xcl.rsp
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Embedded$ ASU\project2\main.c" -xcl_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.xcl" -macro_file "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\Embedded$ ASU\project2\main.c" -D ewarmPART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\Embedded$ ASU\project2\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.pbi : INDEXER D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.xcl |  $
+D$:\Embedded$ ASU\project2\DIO.c
+  flags = "-out=D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.pbi" -f "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.xcl"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.pbi : INDEXER D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.xcl |  $
+D$:\Embedded$ ASU\project2\KEYPAD.c
+  flags = "-out=D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.pbi" -f "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.xcl"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.pbi : INDEXER D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.xcl |  $
+D$:\Embedded$ ASU\project2\lcd.c
+  flags = "-out=D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.pbi" -f "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.xcl"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.pbi : INDEXER D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.xcl |  $
+D$:\Embedded$ ASU\project2\LED.c
+  flags = "-out=D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.pbi" -f "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.xcl"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.pbi : INDEXER D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.xcl |  $
+D$:\Embedded$ ASU\project2\main.c
+  flags = "-out=D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.pbi" -f "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.xcl"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbw : MAKEBROWSE D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbd
+  flags = "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbd" -output "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbw"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part0.pbi : PDBLINK D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.pbi |  $
+D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.pbi
+  flags = -M "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part0.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\DIO.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\KEYPAD.pbi"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part1.pbi : PDBLINK D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.pbi |  $
+D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.pbi
+  flags = -M "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part1.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\lcd.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\LED.pbi"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part2.pbi : PDBLINK D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.pbi
+  flags = -M "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part2.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\main.pbi"
+
+build D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbd : PDBLINK D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part0.pbi |  $
+D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part1.pbi $
+D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part2.pbi
+  flags = -M "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2.pbd" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part0.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part1.pbi" "D$:\Embedded$ ASU\project2\Debug\BrowseInfo\project1_2_part2.pbi"
+

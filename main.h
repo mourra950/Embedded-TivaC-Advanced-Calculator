@@ -1,0 +1,21 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include "inc/hw_types.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "inc/hw_memmap.h"
+#include "driverlib/interrupt.h"
+#include "driverlib/rom_map.h"
+#include "driverlib/systick.h"
+#include "driverlib/timer.h"
+#include "lcd.h"
+#include "KEYPAD.h"
+#include "DIO.h"
+#include "tm4c123gh6pm.h"
+
+void Change_mode(void);
+void Toggle_LED();
