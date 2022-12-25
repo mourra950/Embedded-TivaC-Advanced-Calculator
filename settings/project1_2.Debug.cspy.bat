@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Embedded ASU\project2\settings\project1_2.Debug.general.xcl" --backend -f "D:\Embedded ASU\project2\settings\project1_2.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\settings\project1_2.Debug.general.xcl" --backend -f "D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\settings\project1_2.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Embedded ASU\project2\settings\project1_2.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Embedded ASU\project2\settings\project1_2.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\settings\project1_2.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\settings\project1_2.Debug.driver.xcl" 
 
 @echo off 
 :end

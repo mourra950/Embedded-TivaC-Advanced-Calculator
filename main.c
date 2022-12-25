@@ -58,18 +58,11 @@ void Timer_Display(void)
       st = 0;  
     }
   }
-  if (mode == 2)
-  {
-    Timer_LCD();
-  }
+  
 }
 void Stop_Display(void)
 {
   Stop_sec++;
-  if (mode == 0)
-  {
-    Stop_LCD();
-  }
 }
 
 void TimerHandler(void)
@@ -288,7 +281,8 @@ void Timer_mode(void)
           }
         }
       }
-    }
+      }
+    Timer_LCD();
   }
 }
 void Stop_mode(void)
@@ -323,6 +317,7 @@ void Stop_mode(void)
         }
       }
     }
+     Stop_LCD();
   }
 }
 

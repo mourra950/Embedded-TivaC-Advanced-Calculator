@@ -1,15 +1,15 @@
-"D:\Embedded ASU\project2\DIO.c"
+"D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\DIO.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\Embedded ASU\project2\Debug\BrowseInfo\DIO.pbi.dep
+D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\Debug\BrowseInfo\DIO.pbi.dep
 -o
-D:\Embedded ASU\project2\Debug\BrowseInfo\DIO.pbi
+D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\Debug\BrowseInfo\DIO.pbi
 -I
-D:\Embedded ASU\project2
+D:\Term 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator
 -I
 C:\ti\TivaWare_C_Series-2.2.0.295
 -I

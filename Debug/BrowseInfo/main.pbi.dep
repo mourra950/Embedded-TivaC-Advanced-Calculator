@@ -1,5 +1,6 @@
-D:\Embedded\ ASU\project2\Debug\BrowseInfo\main.pbi: \
-  D:\Embedded\ ASU\project2\main.c D:\Embedded\ ASU\project2\main.h \
+D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\Debug\BrowseInfo\main.pbi: \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\main.c \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\main.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdint.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\yvals.h \
@@ -22,7 +23,9 @@ D:\Embedded\ ASU\project2\Debug\BrowseInfo\main.pbi: \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rom_map.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\systick.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\timer.h \
-  D:\Embedded\ ASU\project2\lcd.h D:\Embedded\ ASU\project2\types.h \
-  D:\Embedded\ ASU\project2\DIO.h D:\Embedded\ ASU\project2\tm4c123gh6pm.h \
-  D:\Embedded\ ASU\project2\bitwise_operation.h \
-  D:\Embedded\ ASU\project2\KEYPAD.h
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\lcd.h \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\types.h \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\DIO.h \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\tm4c123gh6pm.h \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\bitwise_operation.h \
+  D:\Term\ 7\Embedded\Project\Embedded-TivaC-Advanced-Calculator\KEYPAD.h
